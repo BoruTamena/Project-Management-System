@@ -1,18 +1,13 @@
 import express,{Router,Request,Response} from "express"
 
 
-
+const usercontroller=require("../controller/userController")
 const router:Router=express.Router()
 
 
+// routing 
+router.get("/",usercontroller.GetUser)
 
-
-router.get("/",(req:Request,res:Response,next)=>{
-
-
-    res.send("hello there !")
-
-})
-
+ 
 
 module.exports=router
