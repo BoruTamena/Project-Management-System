@@ -7,6 +7,10 @@ const taskController=require("../controller/taskController")
 
 const router:Router = express.Router()
 
-router.use("/create",validateTask,taskController.createNewTask)
+router.get("",taskController.getTasks)
+router.post("/update",taskController.updateTaskStatus)
+router.post("/create",validateTask,taskController.createNewTask)
+
+// router.post("/update",taskController.updateStatus)
 
 module.exports=router

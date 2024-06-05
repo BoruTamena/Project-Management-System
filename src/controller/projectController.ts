@@ -20,7 +20,7 @@ const GetProject=async (req:Request,res:Response)=>{
 const CreateProject=async(req:Request,res:Response)=>{
 
     // creating new project 
-    const pr=projectModels.createNewProject(req.body)
+    const pr = await projectModels.createNewProject(req.body)
     res.json(pr)
 
     // next()

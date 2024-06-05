@@ -2,6 +2,7 @@
 import { Request,Response } from "express"
 import taskModels from "../models/taskModels"
 import { STATUS_CODES } from "http"
+import { Prisma } from "@prisma/client"
 
 
 const createNewTask=async (req:Request,res:Response)=>{
@@ -19,7 +20,22 @@ const createNewTask=async (req:Request,res:Response)=>{
 
 }
 
+const updateTaskStatus=async(req:Request,res:Response)=>{
+
+    const t=await taskModels.updateStatus(req.body)
+
+    res.json(t)
+
+}
+const getTasks=async (req:Request,res:Response)=>{
+
+    const tasks=await taskModels.getAllTask()
+    res.status(200).json(tasks)
+}
+
 
 module.exports={
-    createNewTask
+    createNewTask,
+    updateTaskStatus,
+    getTasks
 }
