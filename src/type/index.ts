@@ -13,3 +13,9 @@ export interface task {
     description:string 
     priority:number  
 }
+
+export interface user {
+    fristname:string
+    lastname:string
+    email:string
+}

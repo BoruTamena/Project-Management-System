@@ -1,29 +1,27 @@
 import prisma from "../prisma/client";
 import { project } from "../type";
 
-
 class ProjectModel {
-
-    async createNewProject(data:project){
-
+    async createNewProject(data: project) {
+    
         return prisma.project.create({
             data,
-        }) 
-
+        });
     }
 
 
-    async getProjectById(id:number){
 
+    async getProjectById(id: number) {
         return prisma.project.findUnique({
-            where:{
-                id:id,
-            }
-        })
-
+            where: {
+                id: id,
+            },
+            include: {
+                documents: true,
+                tasks:true,
+            },
+        });
     }
-
 }
 
-
-export default new ProjectModel
+export default new ProjectModel();

@@ -1,8 +1,6 @@
-
 import { Request,Response } from "express"
 import taskModels from "../models/taskModels"
-import { STATUS_CODES } from "http"
-import { Prisma } from "@prisma/client"
+
 
 
 const createNewTask=async (req:Request,res:Response)=>{

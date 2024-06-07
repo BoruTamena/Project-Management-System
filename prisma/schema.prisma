@@ -51,7 +51,7 @@ model Task{
   createdat DateTime @default(now())
   progress Progress ?
   project Project @relation(fields: [project_id],references: [id])
-  documents Document []
+  documents Document  []
   project_id Int
 
 }
@@ -74,9 +74,9 @@ model Document {
   id Int @id @default(autoincrement())
   url String 
   project Project @relation(fields: [project_id],references: [id])
-  task Task @relation(fields: [task_id],references: [id])
+  task Task ? @relation(fields: [task_id],references: [id])
   project_id Int 
-  task_id Int 
+  task_id Int ?  
 }
 
 

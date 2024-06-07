@@ -1,20 +1,18 @@
 import { PrismaClient } from "@prisma/client"
 import { Request,Response } from "express"
+import userModels from "../models/userModels"
 
 
 const prisma= new PrismaClient()
 
 
-const GetUser= async(req:Request,res:Response)=>{
-    res.send("Getting user")
+const CreateUser= async(req:Request,res:Response)=>{
 
-  
-
-    // next()
-
+    const user=await userModels.createNewUser(req.body)
+    res.json(user)
 }
 
 
 module.exports={
-    GetUser
+    CreateUser
 }
