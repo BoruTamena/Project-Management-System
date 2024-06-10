@@ -7,7 +7,9 @@ const router:Router=express.Router()
 
 
 // routing "name": "Add your name in the body"
-router.post("/signup",validateUser,usercontroller.CreateUser)
+router.post("/signup",validateUser,usercontroller.SignUpUser)
+
+router.post("/login",usercontroller.LoginUser)
 
  
 

@@ -17,16 +17,13 @@ class TaskModels{
         return prisma.task.create({
             data:{
                 ...input,
-    
-                progress:{
+                 progress:{
                     create:{
                         status:"incompleted",
                      }
                 }
-            
             }
-        
-          
+
         })
 
     }
@@ -40,6 +37,21 @@ class TaskModels{
             data:{
                status:input_data.status,
             },
+        })
+    }
+
+
+    async getTasksByStatus(id:number,status:string){
+        return prisma.task.findMany({
+            where:{
+                project_id:id,
+                progress:{
+                    status:status
+                }
+            },
+            include:{
+                progress:true
+            }
         })
     }
 

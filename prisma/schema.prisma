@@ -19,6 +19,7 @@ model User{
   fristname String
   lastname String
   email String
+  password String @default("password")
   member Member ?
 }
 
