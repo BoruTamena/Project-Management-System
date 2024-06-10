@@ -12,6 +12,8 @@ router.post("/signup",validateUser,usercontroller.SignUpUser)
 router.post("/login",usercontroller.LoginUser)
 
 router.get("/refresh",usercontroller.refreshUserToken)
+
+router.get("/logout",usercontroller.logout)
  
 
 module.exports=router

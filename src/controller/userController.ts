@@ -48,9 +48,7 @@ const LoginUser=async(req:Request,res:Response)=>{
     
     return res.status(200).json({accesstoken:token})
 
-
 }
-
 
 
 const refreshUserToken=(req:Request,res:Response)=>{
@@ -95,8 +93,29 @@ const refreshUserToken=(req:Request,res:Response)=>{
  
  }
 
+const logout=(req:Request,res:Response)=>{
+
+    const cookies=req.cookies
+
+    if (!cookies?.jwt) return res.sendStatus(204)
+
+    const refresh_token=cookies.jwt
+
+    // getting user of this token from data base
+   
+    
+    // delete the refresh token from cach or data base
+         //... this would be clearing the session table 
+
+
+    res.clearCookie("jwt",{httpOnly:true}) // set secure:true in production
+
+    return res.status(204).send("logout seccussfully ")
+
+}
 module.exports={    
     SignUpUser,
     LoginUser,
     refreshUserToken,
+    logout
 }
