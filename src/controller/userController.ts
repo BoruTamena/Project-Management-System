@@ -97,7 +97,7 @@ const logout=(req:Request,res:Response)=>{
 
     const cookies=req.cookies
 
-    if (!cookies?.jwt) return res.sendStatus(204)
+    if (!cookies?.jwt_cookie) return res.sendStatus(204)
 
     const refresh_token=cookies.jwt
 
@@ -108,9 +108,9 @@ const logout=(req:Request,res:Response)=>{
          //... this would be clearing the session table 
 
 
-    res.clearCookie("jwt",{httpOnly:true}) // set secure:true in production
+    res.clearCookie("jwt_cookie",{httpOnly:true,maxAge:24*60*60*1000}   ) // set secure:true in production
 
-    return res.status(204).send("logout seccussfully ")
+    return res.status(200).send("logout seccussfully ")
 
 }
 module.exports={    
