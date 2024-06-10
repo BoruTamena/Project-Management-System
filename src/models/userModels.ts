@@ -13,7 +13,14 @@ class UserModel {
 
     }
 
+    async getuserById(id:number){
 
+        return prisma.user.findUnique({
+            where:{
+                id:id,
+            }
+        })
+    }
     async GetUser(email:string){
         
         return prisma.user.findFirst({
@@ -29,6 +36,18 @@ class UserModel {
             }
         })
 
+    }
+
+    async updateUserStatus(id:number){
+
+        return prisma.user.update({
+            where:{
+                id:id,
+            },
+            data:{
+                is_verified:true
+            }
+        })
     }
 
     async findAll(){

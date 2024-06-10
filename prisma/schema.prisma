@@ -19,10 +19,18 @@ model User{
   fristname String
   lastname String
   email String
+  is_verified Boolean @default(false)
   password String @default("password")
   member Member ?
+  tokens token ?
+  
 }
-
+model token{
+  id Int @default(autoincrement())
+  token String
+  user User @relation(fields: [user_id],references: [id])
+  user_id Int @unique
+}
 model Project {
   id Int @id @default(autoincrement())
   title String
