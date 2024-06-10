@@ -1,7 +1,7 @@
 import  express, { Express } from "express";
 import dotenv from "dotenv"
 import upload from "./middleware/fileUpload";
-
+import cookieParser from "cookie-parser"
 
 // requiring routes 
 const user=require("./routes/userRoutes")
@@ -16,7 +16,7 @@ const port = process.env.PORT || 3000
 
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }));    
-
+app.use(cookieParser())
 
 app.use("/user",user)
 app.use("/project",projectRoute)

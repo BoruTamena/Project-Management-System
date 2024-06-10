@@ -9,8 +9,7 @@ const taskController=require("../controller/taskController")
 const router:Router = express.Router()
 
 // adding auth middleware 
-router.use(verifyToken)
-
+router.use(verifyToken)   
 router.get("",taskController.getTasks)
 router.post("/update",taskController.updateTaskStatus)
 router.post("/create",validateTask,taskController.createNewTask)
