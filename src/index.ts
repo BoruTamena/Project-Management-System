@@ -2,6 +2,7 @@ import  express, { Express } from "express";
 import dotenv from "dotenv"
 import upload from "./middleware/fileUpload";
 import cookieParser from "cookie-parser"
+import errorHandler from "./middleware/error_middleware";
 
 // requiring routes 
 const user=require("./routes/userRoutes")
@@ -23,6 +24,7 @@ app.use("/project",projectRoute)
 
 app.use("/task",taskRoute)
 
+app.use(errorHandler)
 app.listen(port)
 
 

@@ -1,5 +1,6 @@
 import express,{Router,Request,Response} from "express"
 import validateUser from "../middleware/validateUser"
+import { tryCatch } from "../utilty/tryCatch"
 
 
 const usercontroller=require("../controller/userController")
@@ -7,15 +8,15 @@ const router:Router=express.Router()
 
 
 // routing "name": "Add your name in the body"
-router.post("/signup",validateUser,usercontroller.SignUpUser)
+router.post("/signup",validateUser,tryCatch(usercontroller.SignUpUser))
 
-router.post("/login",usercontroller.LoginUser)
+router.post("/login",tryCatch(usercontroller.LoginUser))
 
-router.get("/refresh",usercontroller.refreshUserToken)
+router.get("/refresh",tryCatch(usercontroller.refreshUserToken))
 
-router.get("/logout",usercontroller.logout)
+router.get("/logout",tryCatch(usercontroller.logout))
 
-router.get("/verify-email/:id/:token",usercontroller.verifyEmail)
+router.get("/verify-email/:id/:token",tryCatch(usercontroller.verifyEmail))
  
 
 module.exports=router

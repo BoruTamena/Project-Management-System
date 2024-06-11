@@ -5,7 +5,9 @@ import taskModels from "../models/taskModels"
 
 const createNewTask=async (req:Request,res:Response)=>{
 
-    const task=await taskModels.createNewTask(req.body)
+
+    const user_id=parseInt(req.params.id)
+    const task=await taskModels.createNewTask(user_id,req.body)
 
     if (task.id){
 

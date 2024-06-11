@@ -12,11 +12,12 @@ interface input {
 class TaskModels{
 
 
-    async createNewTask(input:task){
+    async createNewTask(user_id:number,input:task){
 
         return prisma.task.create({
             data:{
                 ...input,
+                user_id,
                  progress:{
                     create:{
                         status:"incompleted",

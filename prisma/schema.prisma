@@ -18,7 +18,7 @@ model User{
   id Int @id @default(autoincrement())
   fristname String
   lastname String
-  email String
+  email String @unique
   is_verified Boolean @default(false)
   password String @default("password")
   member Member ?
@@ -45,11 +45,10 @@ model Member{
   id Int @id @default(autoincrement())
   role String
   project Project @relation(fields: [project_id],references: [id])
-  user User @relation(fields: [user_id],references: [id])
+  user User @relation(fields: [user_email],references: [email])
+  tasks Task []
   project_id Int 
-  user_id Int @unique
-
-
+  user_email String @unique
 }
 
 model Task{
@@ -60,8 +59,10 @@ model Task{
   createdat DateTime @default(now())
   progress Progress ?
   project Project @relation(fields: [project_id],references: [id])
+  user Member @relation(fields: [user_id],references: [id])
   documents Document  []
   project_id Int
+  user_id Int 
 
 }
 

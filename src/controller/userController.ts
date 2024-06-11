@@ -172,7 +172,7 @@ const LoginUser=async(req:Request,res:Response)=>{
 
     res.cookie("jwt_cookie",refresh_token,{httpOnly:true,
                                     maxAge:24*60*60*1000,
-                                    sameSite:"none", secure:true})
+                                   })
     
     return res.status(200).json({accesstoken:token})
 
