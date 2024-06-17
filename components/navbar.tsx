@@ -2,7 +2,7 @@ type Props = {}
 
 const Navbar = (props: Props) => {
   return (
-    <div className="container mx-auto sticky top-0">
+    <div className="container mx-auto sticky top-0 z-50">
         <nav className="p-4 bg-secondary-200 relative top-3" >
             <ul className="flex justify-start  items-center space-x-5">
 
