@@ -7,71 +7,78 @@ export default function Home() {
       {/* <Navbar/> */}
       <div className="container mx-auto ">
         
-        <div className="  grid  grid-cols-5 gap-4">
-
-            <div className=" relative top-10 col-span-1  ">
-
-              <div className="mt-3 p-2"> 
-
-
-                <hr />
-                <p> work spaces </p>
-                
-               </div>
-
-            </div>
+        <div className="bg-gradient-radial from-secondary-500 to-primary-600 h-auto p-5 mt-5">
 
             <div className="relative top-10 col-span-4 ">
-               <p className="font-sans font-bold text-2xl text-primary-400 capitalize"> Hello there </p>
-               <p className=" py-2" > Create and manage your Project Here with us 
-                  <span className=" font-bold text-primary-600"> we will handle the rest for you </span>
+               <p className="font-sans font-bold text-9xl text-primary-400 capitalize text-center"> Hello there </p>
+               <p className=" py-3 text-4xl m-5 text-center capitalize" > Create and manage your Project Here with us 
+                we will handle the rest for you
                </p>
+            </div>
 
-               <div className="grid grid-cols-2 gap-4">
-
+            <div className="grid grid-cols-2 gap-4 mt-10 p-10">
                
-                <div className=" bg-primary-400 p-2 rounded-md pointer transition ease-in-out delay-150 hover:-translate-y-1  hover:scale-50 duration-300 ">
-                   <p className=" font-extrabold text-2xl ">New project </p>  
-                   <p className=" pt-2 capitalize"> creating a new project for the frist time and manage with a pms tool</p>
-                </div>
-                 
-
-                <div className=" bg-primary-400 p-2 rounded-md transition ease-in-out delay-150  hover:-translate-y-1  hover:scale-50 duration-300">
-                   <p className=" font-extrabold text-2xl text-secondary-200 ">My projects </p>  
-                   <p className=" pt-2 capitalize"> view all your  existing project </p>
-
-                  
-                </div>
-
-
+               <div className=" bg-primary-500 rounded-3xl hover:bg-primary-800">
+                 <p className=" text-primary-200 text-center p-5 font-bold capitalize">New Project  </p>
                </div>
+   
 
-
-
-            <section>
-              <p className="pt-5 capitalize"> recent projects </p>
-
-               <div className="grid grid-cols-4">
-
-                <div className="relative top-4 shadow-sm rounded-md ">
-
-                  <img className=" w-full h-40" src="/vercel.svg"/>
-
-                  <div className="bg-gradient-to-t from-primary-200 via-primary-500 ">
-                  <p className="text-md capitalize font-bold p-2 text-center "> Next js  projects</p>
-                  <p className=" text-justify p-2 ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse, dicta libero distinctio magni vel, quidem amet dolore sed eos alias in quibusdam dolorum iure similique. Magni, ad laudantium. Adipisci, sapiente!</p>
-                  </div>
-                  
-                </div>
+               <div className="  rounded-3xl outline-dashed hover:outline-none hover:bg-secondary-500">
+                 <p className=" text-primary-200 text-center p-5 font-bold capitalize">My  Project  </p>
                </div>
-            </section>
+              </div>
+
+
+        </div>
+
+
+
+        <section>
+
+            <div className="grid grid-cols-4 mt-10 mb-7 gap-5" >
+
+              <div className=" border-l-8 border-l-primary-400 rounded-md  shadow-2xl shadow-primary-400 -rotate-6">
+                 <p className=" text-2xl font-bold p-4 capitalize"> Project management </p>
+                 <p className=" text-primary-100 p-4 ">Keep Tasks in order ,deadline on track , and team member aligned</p>
+              </div>
+
+
+              <div className=" border-l-8 border-l-primary-400 rounded-md  shadow-2xl shadow-primary-400 -rotate-6">
+                 <p className=" text-2xl font-bold p-4 capitalize"> Collaboration</p>
+                 <p className=" text-primary-100 p-4 ">Collaborating with your team to work on the project is essential for the project success</p>
+              </div>
+
+              <div className=" border-l-8 border-l-primary-400 rounded-md  shadow-2xl shadow-primary-400 -rotate-6">
+                 <p className=" text-2xl font-bold p-4 capitalize"> Task management </p>
+                 <p className=" text-primary-100 p-4 ">Managing project in a task wise is the most .</p>
+              </div>
+
+              <div className=" border-l-8 border-l-primary-400 rounded-md  shadow-2xl shadow-primary-400 -rotate-6">
+                 <p className=" text-2xl font-bold p-4 capitalize"> Project management </p>
+                 <p className=" text-primary-100 p-4 ">Keep Tasks in order ,deadline on track , and team member aligned</p>
+              </div>
+
 
             </div>
 
 
+        </section>
 
-            
-        </div>
+
+        <section className="mt-10">
+          <p className="text-xl uppercase  font-bold">How it work</p>
+
+
+          <div className=" grid grid-cols-4 relative top-0">
+
+            <div className=" col-span-2 m-5 ">
+              <p className="capitalize  mt-5 font-semibold">Sign Up with Us </p>
+              <p className="text-wrap text-primary-950 ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus veniam eos soluta inventore sunt? Saepe perspiciatis, est mollitia nemo animi eaque iusto dolor unde in sapiente autem dolorum nihil itaque.</p>
+             </div>
+          </div>
+        </section>
+
+        <section></section>
         
       </div>
     </main>

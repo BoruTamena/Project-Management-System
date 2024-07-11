@@ -4,29 +4,17 @@ type Props = {}
 
 const page = (props: Props) => {
   return (
-    <div className=" w-full h-screen relative top-2 p-4">
+    <div className=" container m-auto w-full h-screen relative top-2 mt-3 rounded-3xl ">
 
-      <div className="grid grid-cols-2 container m-auto">
+      <div className="flex justify-center ">
+       <div className=" flex-1  w-full  bg-cover bg-center bg-no-repeat "  
+        style={{backgroundImage: "url('/sup.png')"}}
+       >
+      </div>
 
-
-       <div>
-          <h1 className="text-4xl capitalize font-extrabold text-primary-400">wel come !! </h1>
-
-          <p className="p-2 m-2 font-light text-xl relative top-3 mb-3 text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui blanditiis ut vero eaque, aspernatur corporis dignissimos mollitia officiis voluptates labore numquam rerum officia assumenda, ratione repellat odio doloribus possimus fugit?</p>
-
-
-          <ul className=" p-5">
-              <ListItem data={{content:"Mark your project success with pms"}}/>
-              <ListItem data={{content:"successfully task management on fly"}}/>
-              <ListItem data={{content:"Collaborate with your group "}}/>
-             
-          </ul>
-
-        </div>
-
-         <div>
-           <SignUp/>
-         </div>
+      <div className="flex-1">
+        <SignUp/>
+      </div>
 
       </div>
     </div>

@@ -7,11 +7,11 @@ const Navbar = (props: Props) => {
             <ul className="flex justify-start  items-center space-x-5">
 
                 <li className="  text-secondary-950 ">
-                   <p className="font-sans capitalize">workspace</p>
+                   <p className=" capitalize">workspace</p>
                 </li>
 
                 <li className="text-secondary-950 flex-1">
-                    <p className="font-sans capitalize">create project </p>
+                    <p className="capitalize">create project </p>
                 </li>
 
                 <li className="text-secondary-950 ">

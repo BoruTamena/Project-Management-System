@@ -8,12 +8,12 @@ const SignUp = (props: Props) => {
     <div>
 
 
-       <form  className=" container m-auto shadow p-2 bg-secondary-200" action="">
-        <h5 className="text-2xl capitalize p-1 mb-3 font-bold"> create account</h5>
+       <form  className=" container m-auto shadow p-2 bg-primary-200 " action="">
+        <h5 className="text-2xl text-center capitalize p-1 mb-3 font-bold"> create account</h5>
 
-        <p className="p-1 mb-3 text-sm">if you already have an account you can <a href="/login" className="text-primary-500">login</a>  directly .</p>
+        <p className="p-1 text-sm text-center mb-5">if you already have an account you can <a href="/login" className="text-primary-500">login</a>  directly .</p>
 
-        <div className="flex space-x-0 z-0">
+        <div className="flex space-x-0 z-0 ">
   
           <InputField data={{label:"Frist name",fieldName:"fristname",placeholder:"placehoder"}}/>
           <InputField  data={{label:"last name",fieldName:"lastname",placeholder:"placehoder"}}/>
@@ -34,7 +34,7 @@ const SignUp = (props: Props) => {
        <p className="text-sm text-secondary-950"> By signing up, you are creating a Flowbite account, and you agree to Flowbite’s Terms of Use and Privacy Policy.</p>
        </div>
 
-        <button className=" w-full bg-primary-500 rounded p-2 text-primary-100 mt-5 mb-5">Sign Up</button>
+        <button className=" w-full bg-primary-500 rounded p-2 font-bold text-primary-100 mt-5 mb-5">Sign Up</button>
        
        </form>
        
